@@ -104,12 +104,12 @@ for index in high_corr_stocks_pairs.index:
         deriv_num2 = deriv2[i]
         if signal1 == 0:
             if (deriv_num1 >= 0.95) and (deriv_num2 <= 0.05):
-                signal1 = 'long'
-                signal2 = 'short'
-
-            if (deriv_num1 <= 0.05) and (deriv_num2 >= 0.95):
                 signal1 = 'short'
                 signal2 = 'long'
+
+            if (deriv_num1 <= 0.05) and (deriv_num2 >= 0.95):
+                signal1 = 'long'
+                signal2 = 'short'
 
         if signal1 == 'long':
             if (deriv_num1 <= 0.5) and (deriv_num2 >= 0.5):
